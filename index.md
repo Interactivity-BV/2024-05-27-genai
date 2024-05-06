@@ -8,8 +8,8 @@ address: "Gageldijk 167, 3566 MJ Utrecht"      # full street address of workshop
 country: "The Netherlands"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
 latitude: "52.129644351029945"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "	5.102454913794029"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "May 25, 2024"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+longitude: "5.102454913794029"       # decimal longitude of the workshop venue (use https://www.latlong.net)
+humandate: "May 27, 2024"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "8:45 am - 5:00 pm"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
 startdate: 2024-05-27      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2024-05-27        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
@@ -21,47 +21,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 ---
 
 
-{% if site.carpentry == "dc" %}
-{% unless site.curriculum == "dc-astronomy" or site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-geospatial" or site.curriculum == "dc-image" or site.curriculum == "dc-socsci" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-image</code>, <code>dc-astronomy</code>, <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-Check SWC curriculum
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
-
 <h2 id="general">General Information</h2>
 
 
@@ -71,10 +30,6 @@ displayed if the 'eventbrite' field in the header is not set.
 {% include dc/intro.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/intro.html %}
-{% endif %}
-
-{% if site.pilot %}
-This is a pilot workshop, testing out a lesson that is still under development. The lesson authors would appreciate any feedback you can give them about the lesson content and suggestions for how it could be further improved.
 {% endif %}
 
 {% comment %}
@@ -159,26 +114,10 @@ Modify the block below if there are any special requirements.
   {% endif %}
 </p>
 
-{% comment %}
-WHO CAN ATTEND?
-
-If you would like to specify who can attend the workshop,
-you can use the section below.
-
-Move the 'endcomment' tag above the beginning of the following
-<p> tag to make this section visible.
-
-Edit the text to match who can attend the workshop. For instance:
-- This workshop is open to affiliates to ABC university.
-- This workshop is open to the public.
-- If you are interested in attending this workshop, contact me@example.com
-  for more information
-
 <p id="who-can-attend">
     <strong>Who can attend?:</strong>
-    This workshop is open to ....
+    This workshop is open to members and associate members of the Virtual Lab for Plant Breeding (VLPB). There is a limit of 14 participants. 
 </p>
-{% endcomment %}
 
 <hr/>
 
@@ -236,47 +175,18 @@ how one of these schedule tables is constructed.
 <hr/>
 
 
-{% comment %}
-SETUP
-
-Delete irrelevant sections from the setup instructions.  Each
-section is inside a 'div' without any classes to make the beginning
-and end easier to find.
-
-This is the other place where people frequently make mistakes, so
-please preview your site before committing, and make sure to run
-'tools/check' as well.
-{% endcomment %}
-
 <h2 id="setup">Setup</h2>
 
+<div id="ChatGPT">
+<h3>OpenAI ChatGPT</h3>
 <p>
-  To participate in a
-  {% if site.carpentry == "swc" %}
-  Software Carpentry
-  {% elsif site.carpentry == "dc" %}
-  Data Carpentry
-  {% elsif site.carpentry == "lc" %}
-  Library Carpentry
-  {% endif %}
-  workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
-</p>
+For this workshop we will be using <a href="https://chatgpt.com">ChatGPT</a> web interface for prompt engineering and testing ideas.
+In Python we will be using the <a href="https://platform.openai.com/docs/api-reference?lang=python">OpenAI API</a>. A temporary API key will be supplied before the workshop. This key will expire after the workshop.</p>
+<p>
+A subscription to either ChatGPT or the OpenAI API is recommended, but not necessary. The ChatGPT 3.5 version will be sufficient and a key will be provided.</p>
+<p>
+Although we focus on ChatGPT, the concepts such as prompt engineer, API access and retrieval augmented generation also apply to many Open Source models found on <a href="https://huggingface.co/">Hugging Face</a>, such as llama 3, the new powerful LLM provide by <a href="https://huggingface.co/meta-llama">META</a>.</p>
 
-{% comment %}
-For online workshops, the section below provides:
-- installation instructions for the Zoom client
-- recommendations for setting up Learners' workspace so they can follow along
-  the instructions and the videoconferencing
-
-If you do not use Zoom for your online workshop, edit the file
-`_includes/install_instructions/videoconferencing.html`
-to include the relevant installation instructions.
-{% endcomment %}
-{% if online != "false" %}
-{% include install_instructions/videoconferencing.html %}
-{% endif %}
 
 {% comment %}
 These are the installation instructions for the tools used
