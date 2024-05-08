@@ -9,8 +9,8 @@ questions:
 - "What would I like to do with LLM technology"  
 objectives:
 - "A get-to-know-each-other"
-keypoints:
-apps:
 ---
 
 ## Introduction
+
+The overall schedule of the workshop will be presented, as well as some key technical items. And during this session we will introduce ourselves to the group. 
