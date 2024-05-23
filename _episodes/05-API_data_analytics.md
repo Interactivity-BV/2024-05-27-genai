@@ -257,6 +257,7 @@ The Python notebook related to this lesson can be found in the files directory: 
 > {: .solution}
 > > ## Evaluation of the result
 > > What did the output look like? Add your observations to the <a href="{{ page.collaborative_notes }}">collaborative document</a>
+> > The great thing about the OpenAI API is that it takes a lot the complex tasks away from the programmer. The downside is that you are completely dependent on their releases and functionalities. For complex and/or large data sets it might be beneficial to setup your local RAG vector store or use a framework like <a href="https://bionic-gpt.com/">BionicGPT</a>.
 > {: .discussion}
 {: .challenge}
 
