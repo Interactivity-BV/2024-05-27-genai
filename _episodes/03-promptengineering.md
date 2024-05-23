@@ -22,6 +22,24 @@ keypoints:
 
 During this hands-on session we will dive further into the workings of LLMs by designing prompt and see what strategies are effective.
 
+We will use this <a href="{{ page.collaborative_notes }}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+
+The ChatGPT Web Interface is an accessible and user-friendly platform provided by OpenAI, designed to interact with GPT (Generative Pre-trained Transformer) models, specifically tailored for conversational applications:
+
+1. **User-Friendly Interface**: The ChatGPT Web Interface features a clean and intuitive design that makes it easy for users of all skill levels to interact with the AI. It generally includes a simple text input and output area where users can type their queries and receive responses.
+
+2. **Conversational Capabilities**: This interface is optimized for generating conversational AI responses and it's ideal for simulations, customer service scenarios, educational purposes, and more.
+
+3. **Real-Time Interaction**: Responses are generated in real-time, allowing for a dynamic and interactive user experience. This makes it suitable for live demonstrations, educational tools, and real-time problem solving.
+
+4. **Accessibility**: Being web-based, it’s accessible from any device with internet connectivity and a web browser, including desktops, laptops, tablets, and smartphones. This accessibility ensures that users can interact with the AI from virtually anywhere.
+
+5. **Versatile Use Cases**: The interface can handle a wide range of topics and tasks, from casual conversation and troubleshooting to more complex queries like explaining scientific concepts or providing programming help.
+
+6. **Privacy and Security**: OpenAI ensures that interactions with ChatGPT are handled with a focus on privacy and security, adhering to best practices to protect user data and interactions.
+
+7. **Customizable Settings**: Users can often customize their experience, such as choosing different verbosity levels or setting specific parameters for the conversation, enhancing the utility and relevance of the AI’s responses based on user needs.
+
 > ## Prompt Crafting Exercise
 > Historically, we've relied on search engines like Google to find relevant websites for our queries. Now, let's explore how asking a similar question differs when using a Large Language Model (LLM) like ChatGPT.
 > 
@@ -116,15 +134,78 @@ During this hands-on session we will dive further into the workings of LLMs by d
 > > By focusing on these cellular mechanisms, research and clinical strategies can be developed to either bolster these natural defenses or correct the underlying defects that compromise them in disease states. This could lead to targeted therapies that are more effective and have fewer side effects compared to broader approaches like antibiotics and anti-inflammatory drugs.  
 > {: .solution}
 > > ## Discussion
-> > What are you observations about the answer provided by ChatGPT? What should you take into consideration with such detail answers?
+> > What are your observations about the answer provided by ChatGPT? What should you take into consideration with such detailed answers?
 > {: .discussion}
 {: .challenge}
 
 > ## LLM as an assistant
 > What usually works best is to view an LLM as human assistant and write the prompt as if you are addressing a co-worker: **Could you elaborate on ...**, or **I have written the following lines of Python code. It should connect to the API, but I'm getting an `internal server error`: `my code`**. It takes a bit getting used to, but it will increase the quality and appropriateness of the answer for sure.
+> 
+> Similar to an human assistant, most LLMs work best when there is a balance between the amount input given and the length of the requested answer. A prompt such as:
+> ~~~
+> Write a full report on the concept of natural selection.
+> ~~~
+> {: .source}
+> will of course provide an anwser, but it most likely will result in a short and generic report about natural selection.
+> 
+> A common strategy is to have a conversation with the LLM on the topic of interest. So you could start with:
+> ~~~
+> I'm writing a report on natural selection in plants. The target audience are first year biology students, so it needs to clear and without too many abstract concepts. What are key topics I need to address in this report?
+> ~~~
+> followed by prompts asking for additional information on these topics, to write specific sections such as the introduction, etc.
+> You can also ask it to change the tone of voice, explain concepts and summarize sections.   
 {: .callout}  
 
-> ## Elaborating, discussing and specifying output
-> With this exercise we will look further into the **Chat** in **ChatGPT**, asking it to elaborate, be more specific and help with producing output such as Mermaid format and JSON
+> ## Conversation starter
+> With this exercise we will look further into the **Chat** in **ChatGPT**, asking it to elaborate, be more specific and to help with producing documentation, code analytics and other documents.
+> 
+> We are facing a programming related problem which we need to solve: a Python function we are using in our code returns a "dict", but we need the "values" of this "dict" and order them. We need to explain our approach in a markdown file and add sufficient comments in our code to make it human readable. 
+>
+> How would you go about solving this? You can also take another (small) problem if you like, or ask the same question, but then for R. 
+> > ## Step 1, start the conversation
+> > ~~~
+> > I'm facing a programming related problem: the Python function file2dict returns a "dict", but I need the "values" of this "dict" and order them. How can I do this?
+> > ~~~
+> > {: .source}
+> {: .solution} 
+> > ## Step 2, asking for more information
+> > ~~~
+> > In the sorting step, what are the assumptions about the data, how does it perform and what are potential side-effects of this approach?
+> > ~~~
+> > {: .source}
+> {: .solution} 
+> > ## Step 3, commenting the code
+> > ~~~
+> > Could you add these clarifications and assumption to the code in comments? And make a callable function which returns the sorted list? You only need to produce the Python code, no further explanation is need.
+> > ~~~
+> > {: .source}
+> {: .solution} 
+> > ## Step 4, writing the documentation
+> > ~~~
+> > Based on this Python code you just generated, could you produce documentation of this function in markdown? Again, only markdown is sufficient for now. 
+> > ~~~
+> > {: .source}
+> {: .solution}
+> > ## Step 5, making a flowchart
+> > ~~~
+> > Could you now generate a flowchart of this function, which each of the steps shown, in Mermaid format?
+> > ~~~
+> > {: .source}
+> > The Mermaid code can be pasted into <a href="https://app.diagrams.net/?src=about">drawio</a> using the **Arrange** -> **Insert** -> **Advanced** -> **Mermaid...** menu items.
+> {: .solution}
+> > ## Full chat
+> >
+> > The discussion with ChatGPT 4o <a href="https://chat.openai.com/share/96ac42a0-46fd-4d69-9b70-60a83f63b0a2">Sort Values from Dict</a> is available online.
+> {: .solution}  
 {: .challenge}
+
+
+> ## Ethical considerations
+> 
+> When using ChatGPT through the web interface, there are some important things you need to take into consideration:
+> *  **Any code, idea or concept you add to the prompt, or is generated by ChatGPT, might be used for training.** This means that you effectively share it with all users of ChatGPT. It could well be that the code you provided will be later generated for another user working on a similar approach. **Currently, data sent through the API is excluded from this.** 
+> *  **Never share personal information, passwords, API keys / tokens, private company information.** This is of course true for any platform, including github, facebook, etc, but it is also very much true for ChatGPT.
+> *  **ChatGPT (or any other tool from OpenAI, such as DALL-E) will not produce results that are inappropriate in any way or form, or might violate copyrights.** Generally speaking, this is a good idea. However, what is considered inappropriate for some, might be a key cultural aspect to others, and is open to debate. But OpenAI has the final say for ChatGPT. Many other (Open Source) LLMs generally do not have these filters, so then it is up to the user to decide what is inappropriate. When you ask DALL-E to generate images which might contain copyrighted materials, it will also refrain from generating content. Or make something up. You can always ask ChatGPT or DALL-E what the reasons are you're not getting what you expected.
+> There are Open Source LLMs available which are becoming very good, such as Llama 3, and they can run on your local infrastructure. This means that all data, communications and results are kept private.
+{: .callout}
 

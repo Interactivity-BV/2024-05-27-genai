@@ -107,7 +107,7 @@ Modify the block below if there are any special requirements.
   <strong>Requirements:</strong>
   {% if online == "false" %}
     Participants must bring a laptop with a
-    Mac, Linux, or Windows operating system. You need to have a modern Internet browser. If you'd like, you can use Visual Studio Code + Jupyter Notebook plugin as. 
+    Mac, Linux, or Windows operating system. You need to have a modern Internet browser. If you'd like, you can use Visual Studio Code + Jupyter Notebook plugin as well. 
   {% else %}
     Participants must have access to a computer with a
     Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
