@@ -14,3 +14,5 @@ objectives:
 ## Introduction
 
 The overall schedule of the workshop will be presented, as well as some key technical items. And during this session we will introduce ourselves to the group. 
+
+<a href="{{site.workshop_site}}files/01_introduction.pdf">PDF of the presentation belonging to this session.</a>

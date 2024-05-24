@@ -24,6 +24,8 @@ During this hands-on session we will dive further into the workings of LLMs by d
 
 We will use this <a href="{{ page.collaborative_notes }}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 
+<a href="{{site.workshop_site}}files/03_promptengineering.pdf">PDF of the presentation belonging to this session.</a>
+
 The ChatGPT Web Interface is an accessible and user-friendly platform provided by OpenAI, designed to interact with GPT (Generative Pre-trained Transformer) models, specifically tailored for conversational applications:
 
 1. **User-Friendly Interface**: The ChatGPT Web Interface features a clean and intuitive design that makes it easy for users of all skill levels to interact with the AI. It generally includes a simple text input and output area where users can type their queries and receive responses.

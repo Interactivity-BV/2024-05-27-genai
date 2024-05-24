@@ -9,20 +9,24 @@ objectives:
 - "Generating images based on data"
 keypoints:
 - "Automated processing of visual information"
+- "Be aware of biases and the content requirements set by OpenAI"
 ---
 
 ## Image generation and processing through the API
 
-OpenAI provides powerful tools for image analysis and generation through its API, enabling developers to integrate advanced AI capabilities into their applications. Here’s a brief overview:
+OpenAI provides powerful tools for image analysis and generation through its API, enabling developers to integrate advanced AI capabilities into their applications. 
 
-### Image Analysis
+<a href="{{site.workshop_site}}files/06_imagegeneration.pdf">PDF of the presentation belonging to this session.</a>
+
+
+#### Image Analysis
 OpenAI's models can analyze images to extract meaningful information, perform object recognition, and even describe the contents of an image in natural language. This functionality can be used in various applications such as:
 
 - **Object Detection**: Identifying and classifying objects within an image.
 - **Image Captioning**: Generating descriptive captions for images.
 - **Content Moderation**: Detecting inappropriate or sensitive content in images.
 
-### Image Generation
+#### Image Generation
 The API also supports image generation, allowing users to create new images from textual descriptions or modify existing images. This can be used for:
 
 - **Creative Content Creation**: Generating art, illustrations, or design elements based on specific prompts.
@@ -34,10 +38,18 @@ The API also supports image generation, allowing users to create new images from
 The Python notebook related to this lesson can be found in the files directory: <a href="{{site.workshop_site}}files/image_analysis.ipynb">Generating and analyzing images through the API</a>.
 
 
-> ## Image generation
+> ## Image generation based on a recipe
 > In this exercise will be generating several different types of images.
-> **Step 1** Image based on a recipe
+>
 > Use the La Chef Assistant to provide a recipe and then ask DALL-E 3 to create an image based on this recipe. You need to change the event handler for this: in stead of printing the message, you need to store it. Place the resulting image in the <a href="{{ page.collaborative_notes }}">collaborative document</a>.
+> 
+> In a Python notebook you can visualize an image URL with the ipython package:
+> ~~~
+> from IPython.display import display, HTML
+> image_url = response.data[0].url
+> display(HTML(f'<img src="{image_url}" alt="Image" />'))
+> ~~~
+> {: .python}
 > > ## Recipe image
 > > ~~~
 > > class EventHandler(AssistantEventHandler):
@@ -66,7 +78,9 @@ The Python notebook related to this lesson can be found in the files directory: 
 > > 
 > >         self.message += message_content.value + "\n"
 > >         self.message += "\n".join(citations)
+> > 
 > > event_handler = EventHandler()
+> > 
 > > with client.beta.threads.runs.stream(
 > >     thread_id=thread.id,
 > >     assistant_id=assistant.id,

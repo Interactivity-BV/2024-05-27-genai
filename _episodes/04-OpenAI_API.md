@@ -21,6 +21,8 @@ Access to the API requires a key, which will be provided before the start of the
 
 You can use the Python notebook provided here with the basic Python code required to do the exercises, but you can also use this lesson to write the code step by step in an empty notebook or script. This way you can use your favorite IDE or text editor. VSCode by Microsoft has a plugin to run notebooks within the IDE. VSCode is available for many platforms, not only Windows. Google provides <a href="https://colab.research.google.com">free notebooks</a> as well.
 
+<a href="{{site.workshop_site}}files/04_openai_api.pdf">PDF of the presentation belonging to this session.</a>
+
 The OpenAI API provides access to advanced artificial intelligence models developed by OpenAI, including the GPT (Generative Pre-trained Transformer) series and other specialized models. This API allows developers to integrate state-of-the-art natural language processing capabilities into their applications and services. Here’s a brief overview of the key features and functionalities of the OpenAI API:
 
 1. **Advanced Language Models**: The API offers access to powerful language models like GPT-3 and its successors, which are capable of understanding and generating human-like text. These models are pre-trained on diverse internet text and fine-tuned for various tasks, providing robust performance across a wide range of NLP applications.

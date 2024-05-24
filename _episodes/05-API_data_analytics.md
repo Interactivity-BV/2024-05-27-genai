@@ -20,6 +20,9 @@ keypoints:
 
 OpenAI offers several more functionalities which build upon the LLMs. We will have a closer look a very powerful and widely used application: Retrieval-Augmented Generation (RAG).
 
+<a href="{{site.workshop_site}}files/05_dataanalytics.pdf">PDF of the presentation belonging to this session.</a>
+
+
 ### Retrieval-augmented generation
 
 Retrieval-Augmented Generation (RAG) is a technique used in natural language processing that enhances the capabilities of generative models by combining them with retrieval mechanisms. This approach integrates information retrieved from a large knowledge base or data set into the generation process. Here's how it typically works:
