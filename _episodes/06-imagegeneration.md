@@ -132,7 +132,7 @@ The Python notebook related to this lesson can be found in the files directory: 
 > >{: .python}
 > {: .solution}
 > > ## Discussion on the resulting images
-> > Please add the generated images to the document. How do they look? Any other comments you would like to add?
+> > Please add the generated images to the <a href="{{ page.collaborative_notes }}">collaborative document</a>. How do they look? Any other comments you would like to add?
 > {: .discussion}
 > 
 {: .challenge}

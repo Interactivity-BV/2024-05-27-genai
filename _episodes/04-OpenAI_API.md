@@ -74,8 +74,8 @@ The Python notebook related to this lesson can be found in the files directory: 
 > MODEL = MODELS[0] 
 > ~~~
 > {: .python}
-> We are now set to send our first prompt through the API. Check the manual of OpenAI how this is done (recommended) and write the code in a notebook. After this, ask ChatGPT to provide this code for you. Add your prompt and the result to the <a href="{{ page.collaborative_notes }}">collaborative document</a> so we can evaluate this with the group.
-> > ## First prompt
+> We are now set to send our first prompt through the API. Check the manual of the <a href="https://platform.openai.com/docs/introduction">OpenAI API</a> how this is done (recommended) and write the code in a notebook. After this, ask ChatGPT to provide this code for you. Add your prompt and the result to the <a href="{{ page.collaborative_notes }}">collaborative document</a> so we can evaluate this with the group.
+> > ## ChatGPT answer
 > > ~~~
 > > import openai
 > > 
