@@ -58,6 +58,13 @@ The Python notebook related to this lesson can be found in the files directory: 
 > Now let's create the La Chef assistant in Python and add the <a href="{{site.workshop_site}}files/Recipes_Bejo.pdf">pdf with the recipes</a>.
 > You can either use streaming or not, that is up to you.
 > 
+> Additional imports:
+> ~~~
+> from typing_extensions import override
+> from openai import AssistantEventHandler, OpenAI
+> ~~~
+> {: .python}
+> 
 > **Step 1** Create the assistant in python
 > 
 > Provide the assistant with the proper instructions as well.
