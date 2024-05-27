@@ -59,6 +59,7 @@ The Python notebook related to this lesson can be found in the files directory: 
 > You can either use streaming or not, that is up to you.
 > 
 > **Step 1** Create the assistant in python
+> 
 > Provide the assistant with the proper instructions as well.
 > > ## La Chef assistant
 > > ~~~
@@ -101,6 +102,7 @@ The Python notebook related to this lesson can be found in the files directory: 
 > > {: .python}
 > {: .solution}
 > **Step 3** Setup the conversation
+>
 > Create the thread and the event handler (if you are using the streaming method).
 > > ## Setting up the conversation
 > > ~~~
@@ -136,6 +138,7 @@ The Python notebook related to this lesson can be found in the files directory: 
 > > {: .python}
 > {: .solution}
 > **Step 4** The conversation with La Chef
+>
 > Now have a conversation with assistant on the recipes. Ask for example for full vegan options, or for recipes with specific ingredients. This might require some prompt engineering to get the desired output. 
 > > ## First prompts
 > > ~~~
