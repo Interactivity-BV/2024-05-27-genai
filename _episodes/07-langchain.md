@@ -53,7 +53,7 @@ The Python notebook related to this lesson can be found in the files directory: 
 > 
 > You need to install the following modules:
 > ~~~
-> pip install langchain langchain-community html2text tiktoken langchain-openai
+> pip install langchain langchain-community html2text tiktoken langchain-openai pypdf
 > ~~~
 > {: .bash}
 > 
