@@ -107,7 +107,7 @@ The Python notebook related to this lesson can be found in the files directory: 
 > 
 > Documentation: <a href="https://api.python.langchain.com/en/latest/chains/langchain.chains.combine_documents.map_reduce.MapReduceDocumentsChain.html#langchain.chains.combine_documents.map_reduce.MapReduceDocumentsChain">MapReduceDocumentsChain</a>
 > 
-> The map-reduce methods are reported as 'deprecated'. However, Lanchain is refactoring their code base, and there is no new implementation available yet. 
+> The map-reduce methods are reported as 'deprecated'. However, Langchain is refactoring their code base, and there is no new implementation available yet. 
 > 
 > **Create the map and reduce templates**
 >
